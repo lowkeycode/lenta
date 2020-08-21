@@ -229,7 +229,7 @@ p.copyright {
     flex: 1 1 12rem; }
     @media only screen and (max-width: 53.125em) {
       .header-nav__item {
-        flex: 1 1 50%; } }
+        flex: 1 1 1; } }
     .header-nav__item--logo {
       height: 4rem;
       width: 4rem;
@@ -274,7 +274,7 @@ p.copyright {
     flex: 1 1 50%; }
     @media only screen and (max-width: 53.125em) {
       .hero--lrg {
-        flex: 1 1 100%;
+        flex: 1 1 80%;
         align-self: flex-end; } }
   .hero--sml {
     flex: 1 1 50%;
@@ -349,7 +349,7 @@ p.copyright {
   text-transform: uppercase;
   font-weight: 300;
   font-size: 5rem;
-  margin-top: 1rem;
+  margin-top: 3rem;
   color: #FFF;
   letter-spacing: 1px; }
 
