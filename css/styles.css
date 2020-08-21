@@ -1,0 +1,388 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 50%; } }
+
+*::selection {
+  background-color: #aaa; }
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  color: #555;
+  padding: 3rem; }
+
+.container {
+  display: grid;
+  /* First analyze overall layout and
+    how many sections there are (5)
+    and size the rows first thinking about responsivness
+    and how the rows & content need to flow when resized
+    */
+  grid-template-rows: 85vh repeat(4, min-content);
+  /* Second we define our column tracks (common sizes
+    are 8, 12 or 16 column grids) Trento will use 8.
+    Start by putting all at 1fr to get a feel for the
+    columns. In this case we will want max width say 1140px.
+    Split them up into rem. 1140/8 = 142... approx 14rem.
+    Then use minmax to allow them to grow from content up
+    to the 14rem. Using the 1fr on each side of the inner 6
+    columns will allow for full bleed in some sections.
+    Always name the columns. The col start & col end will create
+    create 6 colstarts & ends from number 1 to 6
+    */
+  grid-template-columns: [full-start] minmax(4rem, 1fr) [center-start] repeat(12, [col-start] minmax(min-content, 9.5rem) [col-end]) [center-end] minmax(4rem, 1fr) [full-end]; }
+
+.btn {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: 1rem;
+  width: 15rem;
+  display: block;
+  text-decoration: none;
+  transition: all .3s;
+  text-align: center; }
+  .btn__contact:link, .btn__contact:visited {
+    color: #896C82;
+    border: 1px solid #896C82; }
+  .btn__contact:hover {
+    background-color: #A48E9F;
+    border: 1px solid #A48E9F;
+    color: #F6F7F3;
+    box-shadow: 2px 2px 2px #777;
+    transform: translateY(-3px); }
+  .btn__contact:active {
+    transform: translateY(-1px);
+    box-shadow: 1px 1px 2px #999; }
+  .btn__view-all:link, .btn__view-all:visited {
+    color: #555;
+    border: 1px solid #555; }
+  .btn__view-all:hover {
+    background-color: #555;
+    color: #FFF;
+    border: 1px solid #555;
+    transform: translateY(-3px);
+    box-shadow: 2px 2px 2px #777; }
+  .btn__view-all:active {
+    transform: translateY(-1px);
+    box-shadow: 1px 1px 2px #999; }
+
+.view-all-box {
+  justify-self: center;
+  margin-top: 1.5rem;
+  grid-row: 13 / 14;
+  grid-column: 4 / 6; }
+
+.contact {
+  grid-column: col-start 2 / col-end 11;
+  margin: 6rem 0;
+  padding: 10rem 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-gap: 6rem;
+  align-items: center;
+  justify-items: center; }
+  .contact__box {
+    text-align: center; }
+    .contact__box--2 p {
+      border-right: 1px solid #aaa;
+      border-left: 1px solid #aaa;
+      padding: 0 3rem; }
+
+.dream {
+  background-color: #D0D7BB;
+  padding: .5rem;
+  display: inline-flex;
+  margin: .5rem; }
+
+.features {
+  background-color: #F8F8F8;
+  grid-column: col-start 2 / full-end;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  padding: 3rem; }
+  .features__list {
+    display: grid;
+    margin-top: 3rem;
+    margin-left: 6rem;
+    font-size: 3rem; }
+  .features__heading {
+    font-weight: 200;
+    position: relative;
+    justify-self: end; }
+    .features__heading--1 {
+      font-weight: 300; }
+    .features__heading:hover {
+      font-weight: 300;
+      cursor: pointer; }
+  .features__li {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(15rem, 1fr));
+    justify-items: start;
+    align-items: center; }
+  .features__heading--1 + p {
+    visibility: visible;
+    width: 70%; }
+  .features__heading:hover + p {
+    visibility: visible;
+    width: 70%; }
+  .features__heading--1 ~ .features__li--number {
+    font-weight: 400;
+    font-size: 2.5rem; }
+  .features__heading:hover ~ .features__li--number {
+    font-weight: 400;
+    font-size: 2.5rem; }
+  .features__divide {
+    visibility: hidden;
+    border-bottom: 1px solid #aaa;
+    width: 0;
+    transition: all .2s;
+    margin-top: -2.5rem;
+    margin-left: 2rem; }
+  .features__li .features__heading--1:hover ~ .features__photo-box.features__photo--1 {
+    display: none; }
+  .features__photo-box {
+    min-height: 50rem;
+    display: grid; }
+  .features__photo {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    padding: 5rem; }
+    .features__photo--1 {
+      display: block; }
+
+.footer {
+  background-image: linear-gradient(to bottom, #aaa, #555);
+  grid-column: full-start / full-end;
+  padding: 3rem;
+  position: relative; }
+
+.nav {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  grid-gap: 2rem; }
+  .nav__item {
+    justify-self: center;
+    background-color: rgba(211, 211, 211, 0.075);
+    padding: .5rem 2.5rem; }
+  .nav__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 2rem;
+    display: block;
+    transition: all .2s;
+    width: 0%;
+    border-bottom: 1px solid transparent; }
+    .nav__link:link, .nav__link:visited {
+      color: #FFF; }
+    .nav__link:hover, .nav__link:active {
+      border-bottom: 1px solid #aab38d;
+      width: 100%;
+      transform: translateY(-1px); }
+
+p.copyright {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  color: #F8F8F8;
+  font-size: 1.4rem;
+  width: 70%;
+  text-align: center;
+  margin: 3rem auto 0 auto; }
+
+.header {
+  background-image: url(/img/hero-min.jpg);
+  background-size: cover;
+  background-position: left;
+  background-blend-mode: screen;
+  filter: brightness(110%) grayscale(100%);
+  width: 100%;
+  padding: 3rem;
+  grid-column: full-start / full-end; }
+
+.flex-nav {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  margin: 0 auto; }
+
+.header-nav {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  flex-wrap: wrap; }
+  .header-nav__item {
+    color: #FFF;
+    flex: 1 1 12rem; }
+    @media only screen and (max-width: 53.125em) {
+      .header-nav__item {
+        flex: 1 1 50%; } }
+    .header-nav__item--logo {
+      height: 4rem;
+      width: 4rem;
+      fill: #FFF;
+      margin: 0;
+      padding: 0;
+      transition: all .2s; }
+      .header-nav__item--logo:hover {
+        fill: #555;
+        cursor: pointer; }
+    .header-nav__item--search {
+      height: 2rem;
+      width: 2rem;
+      fill: #FFF;
+      transition: all .2s; }
+      .header-nav__item--search:hover {
+        fill: #555;
+        cursor: pointer; }
+    .header-nav__item--name {
+      flex: 2;
+      text-align: center;
+      font-size: 6rem;
+      font-weight: 400;
+      letter-spacing: 3px; }
+      @media only screen and (max-width: 53.125em) {
+        .header-nav__item--name {
+          order: -1;
+          flex: 1 1 100%; } }
+  .header-nav__link:visited, .header-nav__link:link {
+    color: #FFF;
+    text-decoration: none;
+    transition: all .2s; }
+  .header-nav__link:hover, .header-nav__link:active {
+    color: #555; }
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  height: 50vh;
+  align-items: center; }
+  .hero--lrg {
+    flex: 1 1 50%; }
+    @media only screen and (max-width: 53.125em) {
+      .hero--lrg {
+        flex: 1 1 100%;
+        align-self: flex-end; } }
+  .hero--sml {
+    flex: 1 1 50%;
+    align-self: flex-end; }
+    @media only screen and (max-width: 53.125em) {
+      .hero--sml {
+        flex: 1 1 100%; } }
+
+.stories {
+  background-color: #F6F7F3;
+  grid-column: col-start 1 / full-end;
+  margin: 6rem 0;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(12, 5vw);
+  grid-gap: 1.6rem;
+  padding: 4rem;
+  /*
+    Images have their own intrinsic aspect ratio
+    and will overflow the cell so we create a figure
+    html parent element and set the object-fit property
+    on the child img element to cover to fix this. The
+    figure element is now the grid item.
+    */ }
+  .stories__item--1 {
+    grid-row: 1 / span 5;
+    grid-column: 1 / span 2; }
+  .stories__item--2 {
+    grid-row: 6 / span 4;
+    grid-column: 1 / span 2; }
+  .stories__item--3 {
+    grid-row: 1 / 3;
+    grid-column: 3 / 5; }
+  .stories__item--4 {
+    grid-row: 1 / 4;
+    grid-column: 5 / 9; }
+  .stories__item--5 {
+    grid-row: 3 / 6;
+    grid-column: 3 / 5; }
+  .stories__item--6 {
+    grid-row: 4 / 6;
+    grid-column: 5 / 9; }
+  .stories__item--7 {
+    grid-row: 6 / 8;
+    grid-column: 3 / 5; }
+  .stories__item--8 {
+    grid-row: 6 / 8;
+    grid-column: 5 / 9; }
+  .stories__item--9 {
+    grid-row: 8 / 10;
+    grid-column: 3 / 9; }
+  .stories__item--10 {
+    grid-row: 10 / 13;
+    grid-column: 4 / 6; }
+  .stories__item--11 {
+    grid-row: 10 / 13;
+    grid-column: 1 / 4; }
+  .stories__item--12 {
+    grid-row: 10 / 13;
+    grid-column: 6 / 9; }
+  .stories__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: all .3s; }
+    .stories__img:hover {
+      transform: scale(1.02); }
+
+.heading-1 {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 5rem;
+  margin-top: 1rem;
+  color: #FFF;
+  letter-spacing: 1px; }
+
+.heading-2 {
+  text-transform: uppercase;
+  color: #FFF;
+  font-size: 3.5rem;
+  font-weight: 100; }
+
+.heading-3 {
+  color: #FFF;
+  font-size: 2rem;
+  font-weight: 200; }
+
+.heading-4 {
+  font-size: 2rem;
+  text-transform: uppercase; }
+
+p {
+  font-size: 1.8rem;
+  font-style: italic;
+  font-family: "Cormorant Garamond", Helvetica; }
+
+.heading-fancy {
+  font-family: "Cormorant Garamond", Helvetica;
+  font-size: 3rem;
+  font-style: italic;
+  font-weight: 200; }
+  .heading-fancy--features {
+    position: absolute;
+    top: -5rem;
+    left: -5rem; }
+  .heading-fancy--stories {
+    position: absolute;
+    top: -5rem;
+    left: -6rem; }
