@@ -11,7 +11,6 @@ const topOfNav = nav.offsetTop;
 
 
 function fixedNav() {
-    console.log(topOfNav, window.scrollY, nav.offsetHeight);
     if(window.scrollY >= topOfNav) {
         document.body.classList.add(`fixed-nav`);
         document.body.firstElementChild.lastElementChild.style.marginTop = nav.offsetHeight + `px`;
@@ -23,13 +22,6 @@ function fixedNav() {
 }
 
 window.addEventListener(`scroll`, fixedNav);
-
-
-
-
-
-
-
 
 
 
