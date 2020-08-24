@@ -207,8 +207,6 @@ p.copyright {
   background-image: url(/img/hero-min.jpg);
   background-size: cover;
   background-position: left;
-  background-blend-mode: screen;
-  filter: brightness(110%) grayscale(100%);
   width: 100%;
   padding: 3rem;
   grid-column: full-start / full-end; }
@@ -216,7 +214,21 @@ p.copyright {
 .flex-nav {
   text-transform: uppercase;
   font-size: 2.5rem;
-  margin: 0 auto; }
+  margin: 0 auto;
+  position: relative;
+  transition: all 1s; }
+
+.fixed-nav .flex-nav {
+  position: fixed;
+  background-image: linear-gradient(rgba(170, 170, 170, 0.85), rgba(170, 170, 170, 0.85));
+  top: 0;
+  box-shadow: 0 2px 2px rgba(85, 85, 85, 0.2);
+  z-index: 1;
+  min-width: 100vw;
+  left: 0; }
+
+.fixed-nav .header-nav {
+  padding-top: 2px; }
 
 .header-nav {
   list-style: none;
