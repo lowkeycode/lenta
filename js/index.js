@@ -14,7 +14,6 @@ function fixedNav() {
     if(window.scrollY >= topOfNav) {
         document.body.classList.add(`fixed-nav`);
         document.body.firstElementChild.lastElementChild.style.marginTop = nav.offsetHeight + `px`;
-        console.log(document.body.firstElementChild);
     } else {
         document.body.classList.remove(`fixed-nav`);
         document.body.firstElementChild.lastElementChild.style.marginTop = 0;
@@ -48,3 +47,54 @@ function switchFeatureImage(event) {
 featureHeadings.forEach(function(heading) {
     heading.addEventListener(`mouseover`, switchFeatureImage);
 });
+
+
+//====================================================//
+//====================   MODAL    =================//
+//====================================================//
+
+
+const storiesImages = document.querySelectorAll(`.stories img`);
+const modalOuter = document.querySelector(`.modal__outer`);
+const modalInner = document.querySelector(`.modal__inner`);
+
+
+function handleImgClick(e) {
+    const img = e.currentTarget;
+    imgSrc = this.src;
+    const desc = this.dataset.description;
+    modalInner.innerHTML = `
+            <img src="${imgSrc}" alt="">
+        <p>${desc}</p>
+        <br>
+        <p class="close-modal">x</p>
+    `;
+    modalOuter.classList.add(`open`);
+}
+
+storiesImages.forEach(img => img.addEventListener(`click`, handleImgClick));
+
+
+function closeModal() {
+    modalOuter.classList.remove(`open`);
+}
+
+modalOuter.addEventListener(`click`, function(e) {
+    const isOutside = !e.target.closest(`.modal__inner`);
+    if(isOutside) {
+        closeModal();
+    }
+});
+modalInner.addEventListener(`click`, function(e) {
+    const closeModalButton = e.target.closest(`.close-modal`);
+    if(closeModalButton) {
+        closeModal();
+    }
+})
+
+window.addEventListener(`keydown`, (e) => {
+    if(e.key === `Escape`) {
+        closeModal();
+    }
+})
+

@@ -96,7 +96,7 @@
         object-fit: cover;
         display: block;
         transition: all .3s;
-
+        cursor: pointer;
 
         &:hover {
             transform: scale(1.02);
