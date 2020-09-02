@@ -96,7 +96,7 @@ body {
   align-items: center;
   opacity: 0;
   pointer-events: none;
-  transition: opacity .2s; }
+  transition: all .4s; }
 
 .modal__outer.open {
   opacity: 1;
@@ -109,27 +109,36 @@ body {
   background: #F8F8F8;
   border-radius: 5px;
   overflow: hidden;
-  position: relative;
   transition: all .2s; }
+  .modal__inner .img-wrapper {
+    position: relative; }
   .modal__inner img {
     width: 100%;
     height: 100%;
     display: block;
     object-fit: cover; }
-  .modal__inner p {
+  .modal__inner .img-p {
     text-align: center;
     margin: 0;
     padding: 0;
+    width: 30rem;
     font-size: 2rem;
-    background: #F6F7F3; }
+    background: #F6F7F3;
+    transition: all .2s;
+    position: fixed;
+    bottom: 15vh;
+    left: calc(50vw - 15rem); }
   .modal__inner p.close-modal {
     position: absolute;
     top: 1rem;
     right: 3rem;
     background: rgba(85, 85, 85, 0);
     color: #FFF;
+    height: 3.5rem;
     font-size: 2.5rem;
-    cursor: pointer; }
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+    transition: all .2s; }
     .modal__inner p.close-modal:hover {
       border-bottom: 1px solid #FFF; }
 
@@ -257,7 +266,7 @@ p.copyright {
   background-size: cover;
   background-position: left;
   width: 100%;
-  padding: 3rem;
+  padding-top: 1.5rem;
   grid-column: full-start / full-end; }
 
 .flex-nav {
@@ -329,7 +338,8 @@ p.copyright {
   display: flex;
   flex-wrap: wrap;
   height: 50vh;
-  align-items: center; }
+  align-items: center;
+  padding-left: 1.5rem; }
   .hero--lrg {
     flex: 1 1 50%; }
     @media only screen and (max-width: 53.125em) {
