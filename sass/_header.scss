@@ -25,6 +25,8 @@
     z-index: 1;
     min-width: 100vw;
     left: 0;
+
+    
 }
 
 .fixed-nav .header-nav {
@@ -49,29 +51,6 @@
             flex: 1 1 1;
         }
 
-        &--logo {
-            height: 4rem;
-            width: 4rem;
-            fill: $color-header-text;
-            margin: 0;
-            padding: 0;
-            transition: all .2s;
-            &:hover {
-                fill: $color-grey-dark;
-                cursor: pointer;
-            }
-        }
-        &--search {
-            
-            height: 2rem;
-            width: 2rem;
-            fill: $color-header-text;
-            transition: all .2s;
-            &:hover {
-                fill: $color-grey-dark;
-                cursor: pointer;
-            }
-        }
         &--name {
             flex: 2;
             text-align: center;
@@ -94,6 +73,7 @@
         color: $color-header-text;
         text-decoration: none;
         transition: all .2s;
+        
     }
 
     &__link:hover,

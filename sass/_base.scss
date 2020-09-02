@@ -29,6 +29,7 @@ $font-secondary: 'Cormorant Garamond', Helvetica;
 $bp-largest: 75em; // 1200px/16 = 75em
 $bp-large: 62.5em; // 1000px/16 = 62.5em
 $bp-med: 53.125em; // 850px/16 = 53.125em
+$bp-sml: 31.25em; // 500px/16 = 31.25em
 
 
 *,
@@ -46,6 +47,11 @@ html {
     @media only screen and (max-width: $bp-largest) {
         font-size: 50%;
     }
+
+    @media only screen and (max-width: $bp-sml) {
+        font-size: 40%;
+    }
+
 }
 *::selection {
     background-color: $color-grey-light;
