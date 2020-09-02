@@ -3,8 +3,10 @@
     grid-column: col-start 2 / full-end;
     position: relative;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr))
+    ;
     padding: 3rem;
+    justify-content: center;
 
 
     &__list {
@@ -12,11 +14,18 @@
         margin-top: 3rem;
         margin-left: 6rem;
         font-size: 3rem;
+        @media only screen and (max-width: $bp-sml) {
+            margin-left: 0;
+
+        }
+        
+        
     }
     &__heading {
         font-weight: 200;
         position: relative;
         justify-self: end;
+        
 
         &--1 {
             font-weight: 300;
@@ -33,25 +42,49 @@
         grid-template-columns: repeat(3, minmax(15rem, 1fr));
         justify-items: start;
         align-items: center;
+        @media only screen and (max-width: $bp-sml) {
+            grid-template-columns: minmax(5rem, 1fr);
+            justify-self: center;
+
+        }
+        
         
     }
     &__heading--1 + p {
         visibility: visible;
         width: 70%;
+        @media only screen and (max-width: $bp-sml) {
+            display: none;
+        }
     }
 
     &__heading:hover + p {
         visibility: visible;
         width: 70%;
+        @media only screen and (max-width: $bp-sml) {
+            display: none;
+        }
+    }
+
+    &__heading ~ .features__li--number {
+        @media only screen and (max-width: $bp-sml) {
+            display: none;
+        }
     }
 
     &__heading--1 ~ .features__li--number {
         font-weight: 400;
         font-size: 2.5rem;
+        @media only screen and (max-width: $bp-sml) {
+            display: none;
+        }
     }
     &__heading:hover ~ .features__li--number {
         font-weight: 400;
         font-size: 2.5rem;
+        @media only screen and (max-width: $bp-sml) {
+            display: none;
+        }
     }
     
     &__divide {
@@ -61,6 +94,9 @@
         transition: all .2s;
         margin-top: -2.5rem;
         margin-left: 2rem;
+        @media only screen and (max-width: $bp-sml) {
+            display: none;
+        }
     }
 
     &__li .features__heading--1:hover ~ .features__photo-box.features__photo--1 {

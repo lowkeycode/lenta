@@ -170,12 +170,16 @@ body {
   position: relative;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
-  padding: 3rem; }
+  padding: 3rem;
+  justify-content: center; }
   .features__list {
     display: grid;
     margin-top: 3rem;
     margin-left: 6rem;
     font-size: 3rem; }
+    @media only screen and (max-width: 31.25em) {
+      .features__list {
+        margin-left: 0; } }
   .features__heading {
     font-weight: 200;
     position: relative;
@@ -190,18 +194,37 @@ body {
     grid-template-columns: repeat(3, minmax(15rem, 1fr));
     justify-items: start;
     align-items: center; }
+    @media only screen and (max-width: 31.25em) {
+      .features__li {
+        grid-template-columns: minmax(5rem, 1fr);
+        justify-self: center; } }
   .features__heading--1 + p {
     visibility: visible;
     width: 70%; }
+    @media only screen and (max-width: 31.25em) {
+      .features__heading--1 + p {
+        display: none; } }
   .features__heading:hover + p {
     visibility: visible;
     width: 70%; }
+    @media only screen and (max-width: 31.25em) {
+      .features__heading:hover + p {
+        display: none; } }
+  @media only screen and (max-width: 31.25em) {
+    .features__heading ~ .features__li--number {
+      display: none; } }
   .features__heading--1 ~ .features__li--number {
     font-weight: 400;
     font-size: 2.5rem; }
+    @media only screen and (max-width: 31.25em) {
+      .features__heading--1 ~ .features__li--number {
+        display: none; } }
   .features__heading:hover ~ .features__li--number {
     font-weight: 400;
     font-size: 2.5rem; }
+    @media only screen and (max-width: 31.25em) {
+      .features__heading:hover ~ .features__li--number {
+        display: none; } }
   .features__divide {
     visibility: hidden;
     border-bottom: 1px solid #aaa;
@@ -209,6 +232,9 @@ body {
     transition: all .2s;
     margin-top: -2.5rem;
     margin-left: 2rem; }
+    @media only screen and (max-width: 31.25em) {
+      .features__divide {
+        display: none; } }
   .features__li .features__heading--1:hover ~ .features__photo-box.features__photo--1 {
     display: none; }
   .features__photo-box {
