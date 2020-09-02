@@ -37,7 +37,7 @@ function switchFeatureImage(event) {
     const featureHeading = event.target;
     if (event.target) {
     photoBox.innerHTML = `
-    <img style="display: block;" class="features__photo features__photo${featureNumber}" src="/img/${featureNumber}.jpg" alt="Feature Picture" >
+    <img class="features__photo features__photo${featureNumber}" src="/img/${featureNumber}.jpg" alt="Feature Picture" >
     `;
     } 
     if (featureHeading.dataset.feature !== `--1`) {
@@ -64,13 +64,15 @@ function handleImgClick(e) {
     imgSrc = this.src;
     const desc = this.dataset.description;
     modalInner.innerHTML = `
-            <img src="${imgSrc}" alt="">
-        <p>${desc}</p>
-        <br>
+    <figure class="img-wrapper">
+        <img src="${imgSrc}" alt="Picture of ${desc}">
         <p class="close-modal">x</p>
+        <p class="img-p">${desc}</p>
+    </figure>
     `;
     modalOuter.classList.add(`open`);
 }
+ 
 
 storiesImages.forEach(img => img.addEventListener(`click`, handleImgClick));
 
