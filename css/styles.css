@@ -254,9 +254,7 @@ body {
 .footer {
   background-image: linear-gradient(to bottom, #aaa, #555);
   grid-column: full-start / full-end;
-  padding: 3rem;
-  position: relative;
-  z-index: -1; }
+  padding: 3rem; }
 
 .nav {
   list-style: none;
@@ -276,7 +274,8 @@ body {
     width: 0%;
     border-bottom: 1px solid transparent; }
     .nav__link:link, .nav__link:visited {
-      color: #FFF; }
+      color: #FFF;
+      cursor: pointer; }
     .nav__link:hover, .nav__link:active {
       border-bottom: 1px solid #aab38d;
       width: 100%;
@@ -296,7 +295,7 @@ p.copyright {
   background-size: cover;
   background-position: left;
   width: 100%;
-  padding-top: 1.5rem;
+  padding-top: 3rem;
   grid-column: full-start / full-end; }
 
 .flex-nav {
@@ -315,7 +314,7 @@ p.copyright {
   left: 0; }
 
 .fixed-nav .header-nav {
-  padding-top: 2px; }
+  padding-top: 3rem; }
 
 .header-nav {
   list-style: none;
