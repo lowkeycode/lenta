@@ -6,7 +6,7 @@
     // background-blend-mode: screen;
     // filter: brightness(110%) grayscale(100%);
     width: 100%;
-    padding-top: 3rem;
+    padding-top: 1.5rem;
     grid-column: full-start / full-end;
 }
 
@@ -30,7 +30,7 @@
 }
 
 .fixed-nav .header-nav {
-    padding-top: 3rem;
+    padding-top: 0;
 }
 
 
@@ -39,6 +39,7 @@
     list-style: none;
     display: flex;
     justify-content: space-around;
+    align-items: baseline;
     text-align: center;
     flex-wrap: wrap;
 
@@ -88,7 +89,7 @@
     flex-wrap: wrap;
     height: 50vh;
     align-items: center;
-    padding-left: 1.5rem;
+    padding: 0 3rem;
 
     &--lrg {
         flex: 1 1 50%;

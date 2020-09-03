@@ -295,7 +295,7 @@ p.copyright {
   background-size: cover;
   background-position: left;
   width: 100%;
-  padding-top: 3rem;
+  padding-top: 1.5rem;
   grid-column: full-start / full-end; }
 
 .flex-nav {
@@ -314,12 +314,13 @@ p.copyright {
   left: 0; }
 
 .fixed-nav .header-nav {
-  padding-top: 3rem; }
+  padding-top: 0; }
 
 .header-nav {
   list-style: none;
   display: flex;
   justify-content: space-around;
+  align-items: baseline;
   text-align: center;
   flex-wrap: wrap; }
   .header-nav__item {
@@ -350,7 +351,7 @@ p.copyright {
   flex-wrap: wrap;
   height: 50vh;
   align-items: center;
-  padding-left: 1.5rem; }
+  padding: 0 3rem; }
   .hero--lrg {
     flex: 1 1 50%; }
     @media only screen and (max-width: 53.125em) {
