@@ -7,13 +7,13 @@
 
 
 const nav = document.querySelector(`.flex-nav`);
-const topOfNav = nav.offsetTop;
+const topOfNav = nav.offsetTop - 30;
 
 
 function fixedNav() {
     if(window.scrollY >= topOfNav) {
         document.body.classList.add(`fixed-nav`);
-        document.body.firstElementChild.lastElementChild.style.marginTop = nav.offsetHeight + `px`;
+        document.body.firstElementChild.lastElementChild.style.marginTop = (nav.offsetHeight - 30) + `px`;
     } else {
         document.body.classList.remove(`fixed-nav`);
         document.body.firstElementChild.lastElementChild.style.marginTop = 0;
