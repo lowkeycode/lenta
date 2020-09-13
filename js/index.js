@@ -37,7 +37,7 @@ function switchFeatureImage(event) {
     const featureHeading = event.target;
     if (event.target) {
     photoBox.innerHTML = `
-    <img class="features__photo features__photo${featureNumber}" src="/img/${featureNumber}.jpg" alt="Feature Picture" >
+    <img class="features__photo features__photo${featureNumber}" src="img/${featureNumber}.jpg" alt="Feature Picture" >
     `;
     } 
     if (featureHeading.dataset.feature !== `--1`) {
