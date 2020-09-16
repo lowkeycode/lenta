@@ -1,5 +1,5 @@
 .footer {
-    background-image: linear-gradient(to bottom, $color-grey-light, $color-grey-dark);
+    background-image: linear-gradient(to bottom, var(--color-grey-light), var(--color-grey-dark));
     grid-column: full-start / full-end;
     padding: 3rem;
 }
@@ -40,7 +40,7 @@
 
         &:hover,
         &:active {
-            border-bottom: 1px solid $color-primary-dark;
+            border-bottom: 1px solid var(--color-primary-dark);
             width: 100%;
             transform: translateY(-1px);
         }
@@ -50,9 +50,9 @@
 
 }
 p.copyright {
-    font-family: $font-primary;
+    font-family: var(--font-primary);
     font-style: normal;
-    color: $color-accent-1;
+    color: var(--color-accent-1);
     font-size: 1.4rem;
     width: 70%;
     text-align: center;

@@ -18,14 +18,14 @@
     // Contact Button
     &__contact:link,
     &__contact:visited {
-    color: $color-secondary-dark;
-    border: 1px solid $color-secondary-dark;
+    color: var(--color-secondary-dark);
+    border: 1px solid var(--color-secondary-dark);
 
     }
     &__contact:hover {
-        background-color: $color-secondary-light;
-        border: 1px solid $color-secondary-light;
-        color: $color-accent-2;
+        background-color: var(--color-secondary-light);
+        border: 1px solid var(--color-secondary-light);
+        color: var(--color-accent-2);
         box-shadow: 2px 2px 2px #777;
         transform: translateY(-3px);
     }
@@ -39,14 +39,14 @@
 
     &__view-all:link, 
     &__view-all:visited {
-        color: $color-grey-dark;
-        border: 1px solid $color-grey-dark;
+        color: var(--color-grey-dark);
+        border: 1px solid var(--color-grey-dark);
     }
 
     &__view-all:hover {
-        background-color: $color-grey-dark;
+        background-color: var(--color-grey-dark);
         color: #FFF;
-        border: 1px solid $color-grey-dark;
+        border: 1px solid var(--color-grey-dark);
         transform: translateY(-3px);
         box-shadow: 2px 2px 2px #777;
     }
@@ -95,7 +95,7 @@
         display: grid;
         width: 60vw;
         height: 60vh;
-        background: $color-accent-1;
+        background: var(--color-accent-1);
         border-radius: 5px;
         overflow: hidden;
         transition: all .2s;
@@ -118,7 +118,7 @@
             padding: 0;
             width: 30rem;
             font-size: 2rem;
-            background: $color-accent-2;
+            background: var(--color-accent-2);
             transition: all .2s;
             position: fixed;
             bottom: 15vh;
