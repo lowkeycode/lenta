@@ -4,18 +4,18 @@
     font-weight: 300;
     font-size: 5rem;
     margin-top: 3rem;
-    color: $color-header-text;
+    color: var(--color-header-text);
     letter-spacing: 1px;
 }
 .heading-2 {
     text-transform: uppercase;
-    color: $color-header-text;
+    color: var(--color-header-text);
     font-size: 3.5rem;
     font-weight: 100;
 }
 .heading-3 {
     // text-transform: uppercase;
-    color: $color-header-text;
+    color: var(--color-header-text);
     font-size: 2rem;
     font-weight: 200;
 }
@@ -27,11 +27,11 @@
 p {
     font-size: 1.8rem;
     font-style: italic;
-    font-family: $font-secondary;
+    font-family: var(--font-secondary);
 }
 
 .heading-fancy {
-    font-family: $font-secondary;
+    font-family: var(--font-secondary);
     font-size: 3rem;
     font-style: italic;
     font-weight: 200;

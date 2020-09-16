@@ -45,10 +45,10 @@
 
 
     &__item {
-        color: $color-header-text;
+        color: var(--color-header-text);
         flex: 1 1 12rem;
 
-        @media only screen and (max-width: $bp-med) {
+        @media only screen and (max-width: var(--bp-med)) {
             flex: 1 1 1;
         }
 
@@ -59,7 +59,7 @@
             font-weight: 400;
             letter-spacing: 3px;
 
-            @media only screen and (max-width: $bp-med) {
+            @media only screen and (max-width: var(--bp-med)) {
                 order: -1;
                 flex: 1 1 100%;
             }
@@ -71,7 +71,7 @@
 
     &__link:visited,
     &__link:link {
-        color: $color-header-text;
+        color: var(--color-header-text);
         text-decoration: none;
         transition: all .2s;
         
@@ -79,7 +79,7 @@
 
     &__link:hover,
     &__link:active {
-        color: $color-grey-dark;
+        color: var(--color-grey-dark);
     }
 
 }
@@ -93,7 +93,7 @@
 
     &--lrg {
         flex: 1 1 50%;
-        @media only screen and (max-width: $bp-med) {
+        @media only screen and (max-width: var(--bp-med)) {
             flex: 1 1 80%;
             align-self: flex-end;
         }
@@ -102,7 +102,7 @@
     &--sml {
         flex: 1 1 50%;
         align-self: flex-end;
-        @media only screen and (max-width: $bp-med) {
+        @media only screen and (max-width: var(--bp-med)) {
             flex: 1 1 100%;
         }
     }
