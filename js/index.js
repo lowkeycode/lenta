@@ -33,11 +33,11 @@ const featureHeadings = document.querySelectorAll(`.features__heading`);
 const photoBox = document.querySelector(`.features__photo-box`);
 
 function switchFeatureImage(event) {
-    let featureNumber = event.target.dataset.feature
+    let featureNumber = event.target.dataset.feature;
     const featureHeading = event.target;
     if (event.target) {
     photoBox.innerHTML = `
-    <img class="features__photo features__photo${featureNumber}" src="img/${featureNumber}.JPG" alt="Feature Picture" >
+    <img class="features__photo features__photo${featureNumber}" src="img/${featureNumber}.JPG" alt="Feature Picture">
     `;
     } 
     if (featureHeading.dataset.feature !== `--1`) {
