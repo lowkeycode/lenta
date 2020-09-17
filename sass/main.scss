@@ -1,13 +1,19 @@
 @import "abstracts/variables";
+
 @import "base/home-base";
 @import "base/typography";
+
 @import "components/buttons";
 @import "components/modal";
+
 @import "pages/home/home-contact";
 @import "pages/home/home-features";
 @import "pages/home/home-footer";
 @import "pages/home/home-header";
 @import "pages/home/home-stories";
+
+@import "pages/blog/blog-body"
+
 
 
 
