@@ -1,0 +1,65 @@
+
+
+// ===================//
+// ===== Buttons =====//
+// ===================//
+.btn {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: 1rem;
+    width: 15rem;
+    display: block;
+    text-decoration: none;
+    transition: all .3s; 
+    text-align: center;
+
+
+    // Contact Button
+    &__contact:link,
+    &__contact:visited {
+    color: var(--color-secondary-dark);
+    border: 1px solid var(--color-secondary-dark);
+
+    }
+    &__contact:hover {
+        background-color: var(--color-secondary-light);
+        border: 1px solid var(--color-secondary-light);
+        color: var(--color-accent-2);
+        box-shadow: 2px 2px 2px #777;
+        transform: translateY(-3px);
+    }
+    &__contact:active {
+        transform: translateY(-1px);
+        box-shadow: 1px 1px 2px #999;
+
+    }
+
+    // View All Button
+
+    &__view-all:link, 
+    &__view-all:visited {
+        color: var(--color-grey-dark);
+        border: 1px solid var(--color-grey-dark);
+    }
+
+    &__view-all:hover {
+        background-color: var(--color-grey-dark);
+        color: #FFF;
+        border: 1px solid var(--color-grey-dark);
+        transform: translateY(-3px);
+        box-shadow: 2px 2px 2px #777;
+    }
+
+    &__view-all:active {
+        transform: translateY(-1px);
+        box-shadow: 1px 1px 2px #999;
+
+    }
+}
+.view-all-box {
+    justify-self: center;
+    margin-top: 1.5rem;
+    grid-row: 13 / 14;
+    grid-column: 4 / 6;
+}

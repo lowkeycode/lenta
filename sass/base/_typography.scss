@@ -1,0 +1,50 @@
+
+.heading-1 {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 5rem;
+    margin-top: 3rem;
+    color: var(--color-header-text);
+    letter-spacing: 1px;
+}
+.heading-2 {
+    text-transform: uppercase;
+    color: var(--color-header-text);
+    font-size: 3.5rem;
+    font-weight: 100;
+}
+.heading-3 {
+    // text-transform: uppercase;
+    color: var(--color-header-text);
+    font-size: 2rem;
+    font-weight: 200;
+}
+.heading-4 {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 1.8rem;
+    font-style: italic;
+    font-family: var(--font-secondary);
+}
+
+.heading-fancy {
+    font-family: var(--font-secondary);
+    font-size: 3rem;
+    font-style: italic;
+    font-weight: 200;
+
+
+    &--features {
+        position: absolute;
+        top: -5rem;
+        left: -5rem;
+    }
+    &--stories {
+        position: absolute;
+        top: -5rem;
+        left: -6rem;
+    }
+}
