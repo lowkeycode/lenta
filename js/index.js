@@ -32,23 +32,27 @@ window.addEventListener(`scroll`, fixedNav);
 const featureHeadings = document.querySelectorAll(`.features__heading`);
 const photoBox = document.querySelector(`.features__photo-box`);
 
+
 function switchFeatureImage(event) {
     let featureNumber = event.target.dataset.feature;
     const featureHeading = event.target;
+
     if (event.target) {
-    photoBox.innerHTML = `
-    <img class="features__photo features__photo${featureNumber}" src="img/${featureNumber}.jpg" alt="Feature Picture">
-    `;
+        photoBox.innerHTML = `
+        <img class="features__photo features__photo${featureNumber}" src="img/${featureNumber}.jpg" alt=" ">
+        `;
+        
     } 
     if (featureHeading.dataset.feature !== `--1`) {
         featureHeading.parentElement.parentElement.firstElementChild.firstElementChild.classList.remove(`features__heading--1`)
     }
+    
 }
+
+
 featureHeadings.forEach(function(heading) {
     heading.addEventListener(`mouseover`, switchFeatureImage);
 });
-
-
 //====================================================//
 //====================   MODAL    =================//
 //====================================================//
