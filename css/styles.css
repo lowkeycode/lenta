@@ -96,10 +96,17 @@ p {
     position: absolute;
     top: -5rem;
     left: -5rem; }
+    @media only screen and (max-width: 31.25em) {
+      .heading-fancy--features {
+        left: 3rem; } }
   .heading-fancy--stories {
     position: absolute;
     top: -5rem;
     left: -6rem; }
+    @media only screen and (max-width: 31.25em) {
+      .heading-fancy--stories {
+        top: -6rem;
+        left: 3rem; } }
 
 .btn {
   text-transform: uppercase;
@@ -230,6 +237,9 @@ p {
   grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
   padding: 3rem;
   justify-content: center; }
+  @media only screen and (max-width: 31.25em) {
+    .features {
+      grid-column: full-start / full-end; } }
   .features__list {
     display: grid;
     margin-top: 3rem;
@@ -437,6 +447,9 @@ p.copyright {
     on the child img element to cover to fix this. The
     figure element is now the grid item.
     */ }
+  @media only screen and (max-width: 31.25em) {
+    .stories {
+      grid-column: full-start / full-end; } }
   .stories__item--1 {
     grid-row: 1 / span 5;
     grid-column: 1 / span 2; }
@@ -517,6 +530,7 @@ p.copyright {
     filter: opacity(80%); }
   .post__heading {
     font-size: 3.5rem;
+    margin-bottom: 3rem;
     text-align: center;
     background-color: var(--color-secondary-light);
     color: var(--color-accent-1); }
