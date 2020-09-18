@@ -517,6 +517,7 @@ p.copyright {
     filter: opacity(80%); }
   .post__heading {
     font-size: 3.5rem;
+    margin-bottom: 3rem;
     text-align: center;
     background-color: var(--color-secondary-light);
     color: var(--color-accent-1); }
