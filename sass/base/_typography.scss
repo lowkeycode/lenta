@@ -41,10 +41,17 @@ p {
         position: absolute;
         top: -5rem;
         left: -5rem;
+        @media only screen and (max-width: $bp-sml) {
+            left: 3rem;
+        }
     }
     &--stories {
         position: absolute;
         top: -5rem;
         left: -6rem;
+        @media only screen and (max-width: $bp-sml) {
+            top: -6rem;
+            left: 3rem;
+        }
     }
 }
