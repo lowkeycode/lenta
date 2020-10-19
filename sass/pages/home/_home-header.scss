@@ -25,15 +25,11 @@
     z-index: 1;
     min-width: 100vw;
     left: 0;
-
-    
 }
 
 .fixed-nav .header-nav {
     padding-top: 0;
 }
-
-
 
 .header-nav {
     list-style: none;
@@ -48,10 +44,6 @@
         color: var(--color-header-text);
         flex: 1 1 12rem;
 
-        @media only screen and (max-width: $bp-med) {
-            flex: 1 1 1;
-        }
-
         &--name {
             flex: 2;
             text-align: center;
@@ -59,15 +51,18 @@
             font-weight: 400;
             letter-spacing: 3px;
 
-            @media only screen and (max-width: $bp-med) {
-                order: -1;
-                flex: 1 1 100%;
-            }
-
             
         }
         
     }
+    
+    @media only screen and (max-width: $bp-med) {
+        
+        &__item:not(:nth-last-of-type(4)) {
+            display: none;
+        }
+    }
+
 
     &__link:visited,
     &__link:link {
@@ -108,6 +103,46 @@
     }
 
 }
+
+// Menu Bars
+
+.menu-bars {
+    position: absolute;
+    right: 5rem;
+    top: 2rem;
+    z-index: 10;
+    display: inline;
+    cursor: pointer;
+}
+
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 2px;
+    background-color: var(--color-header-text);
+    margin: 8px 0;
+    transition: .4s;
+    @media only screen and (min-width: $bp-med) {
+        display: none;
+    }
+  }
+  
+  /* Rotate first bar */
+  .change .bar1 {
+    transform: rotate(-45deg) translate(-7px, 8px);
+  }
+  
+  /* Fade out the second bar */
+  .change .bar2 {
+    opacity: 0;
+  }
+  
+  /* Rotate last bar */
+  .change .bar3 {
+    transform: rotate(45deg) translate(-6px, -8px);
+  }
 
 
 
