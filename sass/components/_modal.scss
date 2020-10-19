@@ -21,12 +21,12 @@
         pointer-events: none;
         transition: all .4s;
     }
-
+    
     &__outer.open {
         opacity: 1;
         pointer-events: all;
     }
-
+    
     &__inner {
         display: grid;
         width: 60vw;
@@ -51,14 +51,14 @@
         & .img-p {
             text-align: center;
             margin: 0;
-            padding: 0;
-            width: 30rem;
+            padding: 0 1rem;
             font-size: 2rem;
             background: var(--color-accent-2);
             transition: all .2s;
             position: fixed;
             bottom: 15vh;
-            left: calc(50vw - 15rem);
+            left: calc(50vw);
+            transform : translateX(-50%);
         }
 
         & p.close-modal {
