@@ -374,7 +374,7 @@ p.copyright {
   background-image: linear-gradient(rgba(170, 170, 170, 0.85), rgba(170, 170, 170, 0.85));
   top: 0;
   box-shadow: 0 2px 2px rgba(85, 85, 85, 0.2);
-  z-index: 1;
+  z-index: 5;
   min-width: 100vw;
   left: 0; }
 
@@ -476,9 +476,9 @@ p.copyright {
 
 .menu-bars {
   position: fixed;
-  right: 5rem;
-  top: 2.75rem;
-  z-index: 10;
+  top: 6rem;
+  right: 9rem;
+  z-index: 4;
   display: inline;
   cursor: pointer; }
 
@@ -486,10 +486,11 @@ p.copyright {
 .bar2,
 .bar3 {
   width: 35px;
-  height: 2px;
-  background-color: var(--color-header-text);
+  height: 3px;
+  background-color: var(--color-grey-dark);
   margin: 8px 0;
-  transition: .4s; }
+  transition: .4s;
+  box-shadow: 1px 1px 3px; }
   @media only screen and (min-width: 53.125em) {
     .bar1,
     .bar2,
@@ -510,7 +511,7 @@ p.copyright {
 
 .overlay {
   position: fixed;
-  z-index: 10;
+  z-index: 3;
   top: 0;
   left: 0;
   width: 100vw;
