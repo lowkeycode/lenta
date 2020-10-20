@@ -6,17 +6,21 @@
 //====================================================//
 
 
-const nav = document.querySelector(`.flex-nav`);
-const topOfNav = nav.offsetTop;
+const flexNav = document.querySelector(`.flex-nav`);
+const hero = document.querySelector('.hero');
+const topOfNav = flexNav.offsetTop;
 
 
 function fixedNav() {
+    if(window.innerWidth <= 850) {
+        return;
+    }
     if(window.scrollY >= topOfNav) {
         document.body.classList.add(`fixed-nav`);
-        document.body.firstElementChild.lastElementChild.style.marginTop = nav.offsetHeight + `px`;
+        hero.style.marginTop = flexNav.offsetHeight + `px`;
     } else {
         document.body.classList.remove(`fixed-nav`);
-        document.body.firstElementChild.lastElementChild.style.marginTop = 0;
+        hero.style.marginTop = 0;
     }
 }
 
@@ -50,9 +54,10 @@ function navAnimation(direction1, direction2) {
 }
 
 
-function toggleNav(){
-    // Toggle hamburger close/open
+function toggleMobNav(){
+    // Toggle hamburger close/open/pos-fixed
     menuBars.classList.toggle('change');
+    menuBars.classList.toggle('menu-bars-fixed');
     //Toggle menu active
     overlay.classList.toggle('overlay-active');
     if(overlay.classList.contains('overlay-active')) {
@@ -67,12 +72,12 @@ function toggleNav(){
 }
 
 
-menuBars.addEventListener('click', toggleNav);
-homeNav.addEventListener('click', toggleNav);
-aboutNav.addEventListener('click', toggleNav);
-bookingsNav.addEventListener('click', toggleNav);
-galleryNav.addEventListener('click', toggleNav);
-blogNav.addEventListener('click', toggleNav);
+menuBars.addEventListener('click', toggleMobNav);
+homeNav.addEventListener('click', toggleMobNav);
+aboutNav.addEventListener('click', toggleMobNav);
+bookingsNav.addEventListener('click', toggleMobNav);
+galleryNav.addEventListener('click', toggleMobNav);
+blogNav.addEventListener('click', toggleMobNav);
 
 
 
