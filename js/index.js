@@ -24,6 +24,60 @@ window.addEventListener(`scroll`, fixedNav);
 
 
 
+
+
+//====================================================//
+//=====================   MOB NAV   ==================//
+//====================================================//
+
+const overlay = document.querySelector('.overlay');
+const menuBars = document.querySelector('.menu-bars');
+const homeNav = document.querySelector('.mobnav__list--home');
+const aboutNav = document.querySelector('.mobnav__list--about');
+const bookingsNav = document.querySelector('.mobnav__list--bookings');
+const galleryNav = document.querySelector('.mobnav__list--gallery');
+const blogNav = document.querySelector('.mobnav__list--blog');
+const contactNav = document.querySelector('.mobnav__list--contact');
+const navItems = [homeNav, aboutNav, bookingsNav, galleryNav, blogNav, contactNav];
+
+// Control Navigation Animation
+
+function navAnimation(direction1, direction2) {
+    navItems.forEach((nav, i) => {
+        debugger;
+        nav.classList.replace(`slide-${direction1}-${i + 1}`, `slide-${direction2}-${i + 1}`);
+    });
+}
+
+
+function toggleNav(){
+    // Toggle hamburger close/open
+    menuBars.classList.toggle('change');
+    //Toggle menu active
+    overlay.classList.toggle('overlay-active');
+    if(overlay.classList.contains('overlay-active')) {
+        //Animate in
+        overlay.classList.replace('overlay-slide-left', 'overlay-slide-right');
+       navAnimation('out', 'in');
+    } else {
+        overlay.classList.replace('overlay-slide-right', 'overlay-slide-left');
+        navAnimation('in', 'out');
+    }
+
+}
+
+
+menuBars.addEventListener('click', toggleNav);
+homeNav.addEventListener('click', toggleNav);
+aboutNav.addEventListener('click', toggleNav);
+bookingsNav.addEventListener('click', toggleNav);
+galleryNav.addEventListener('click', toggleNav);
+blogNav.addEventListener('click', toggleNav);
+
+
+
+
+
 //====================================================//
 //====================   FEATURES    =================//
 //====================================================//
