@@ -35,17 +35,20 @@
     &__date {
         font-size: 2.5rem;
         text-align: center;
-        margin-bottom: 1.5rem;
+        margin-top: 1.5rem;
+        margin-bottom: 4.5rem;
     }
     
 
     &__title {
+        grid-column: 1 / -1;
         font-size: 4.5rem;
-        text-align: center;
         margin-bottom: 3rem;
         background-color: var(--color-primary-light);
         border-radius: 2px;
         filter: opacity(80%);
+        padding: 1.5 3rem;
+        text-align: center;
     }
 
     &__heading {
@@ -54,7 +57,7 @@
         text-align: center;
         background-color: var(--color-secondary-light);
         color: var(--color-accent-1);
-        grid-column: 3 / -3;
+        grid-column: 2 / -2;
         
     }
 
