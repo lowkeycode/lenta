@@ -681,3 +681,27 @@ p.copyright {
     text-indent: 3rem; }
   .post__ital {
     font-style: italic; }
+
+.g-container {
+  display: flex;
+  flex-direction: column; }
+  .g-container__heading {
+    font-size: 1.75rem;
+    margin: 6rem 6rem 3rem;
+    padding: 1rem;
+    background-color: var(--color-primary-light);
+    border-radius: 2px;
+    filter: opacity(80%);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px; }
+  .g-container__gallery {
+    grid-column: 2 / -2;
+    grid-row: 2 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .g-container__gallery img {
+      margin: 1.5rem 0;
+      height: 47%;
+      width: 50%; }
