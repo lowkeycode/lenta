@@ -1,0 +1,47 @@
+.gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__heading {
+    width: 85vw;
+    font-size: 2rem;
+    margin: 3rem 6rem 6rem;
+    padding: 1rem;
+    background-color: var(--color-primary-light);
+    border-radius: 2px;
+    filter: opacity(80%);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+
+  &__container {
+    width: 70vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & img {
+      height: 100%;
+      width: 100%;
+      transition: all 0.2s;
+      filter: grayscale(25%);
+    }
+  }
+}
+
+img:hover {
+  filter: grayscale(0%);
+}
+
+figcaption {
+  text-align: center;
+  margin: 0.75rem 0 6rem 0;
+  padding: 0.75rem 10vw;
+  font-size: 2rem;
+  background: var(--color-primary-light);
+  border-radius: 2px;
+}
