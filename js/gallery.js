@@ -1,7 +1,10 @@
 const imageContainer = document.querySelector(".gallery__container");
 const body = document.querySelector("body");
+const loader = document.querySelector('.loader');
 
 let photosArray = [];
+
+
 
 // API
 const count = 3;
@@ -44,6 +47,9 @@ const displayPhotos = function () {
 // Get photos from unsplash API
 
 async function getPhotos() {
+
+  // Show loader
+  loader.removeAttribute('hidden');
   try {
     const response = await fetch(apiUrl);
     photosArray = await response.json();
@@ -79,6 +85,7 @@ async function getPhotos() {
     const lastImgObserver = new IntersectionObserver(obsCallback, options);
 
     lastImgObserver.observe(lastImg);
+    loader.setAttribute('hidden', true);
   } catch (error) {
     console.log(error);
   }
