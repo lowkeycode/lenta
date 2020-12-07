@@ -1,6 +1,9 @@
 const imageContainer = document.querySelector(".gallery__container");
 const body = document.querySelector("body");
 const loader = document.querySelector('.loader');
+const header = document.querySelector('.header')
+const menuBarsArray = document.querySelectorAll('.bar')
+
 
 let photosArray = [];
 
@@ -91,5 +94,79 @@ async function getPhotos() {
   }
 }
 
+// Mod nav
+
+
 // On load
 getPhotos();
+
+const overlay = document.querySelector('.overlay');
+const menuBars = document.querySelector('.galmenu-bars');
+const homeNav = document.querySelector('.galmobnav__list--home');
+const aboutNav = document.querySelector('.galmobnav__list--about');
+const bookingsNav = document.querySelector('.galmobnav__list--bookings');
+const galleryNav = document.querySelector('.galmobnav__list--gallery');
+const blogNav = document.querySelector('.galmobnav__list--blog');
+const contactNav = document.querySelector('.galmobnav__list--contact');
+const navItems = [homeNav, aboutNav, bookingsNav, galleryNav, blogNav, contactNav];
+
+// Control Navigation Animation
+
+function navAnimation(direction1, direction2) {
+    navItems.forEach((nav, i) => {
+        nav.classList.replace(`slide-${direction1}-${i + 1}`, `slide-${direction2}-${i + 1}`);
+    });
+}
+
+
+function toggleMobNav(){
+    // Toggle hamburger close/open/pos-fixed
+    menuBars.classList.toggle('change');
+    menuBars.classList.toggle('menu-bars-fixed');
+    //Toggle menu active
+    overlay.classList.toggle('overlay-active');
+    if(overlay.classList.contains('overlay-active')) {
+        //Animate in
+        overlay.classList.replace('overlay-slide-left', 'overlay-slide-right');
+       navAnimation('out', 'in');
+    } else {
+        overlay.classList.replace('overlay-slide-right', 'overlay-slide-left');
+        navAnimation('in', 'out');
+    }
+
+}
+
+
+menuBars.addEventListener('click', toggleMobNav);
+homeNav.addEventListener('click', toggleMobNav);
+aboutNav.addEventListener('click', toggleMobNav);
+bookingsNav.addEventListener('click', toggleMobNav);
+galleryNav.addEventListener('click', toggleMobNav);
+blogNav.addEventListener('click', toggleMobNav);
+
+
+// Show menu bars at end of header
+
+const showHideBars = function(entries, observer)  {
+  let [entry] = entries;
+  console.log(entry);
+  if(!entry.isIntersecting) {
+    menuBarsArray.forEach(bar => {
+      bar.classList.remove('hidden');
+    });
+  } else {
+    menuBarsArray.forEach(bar => {
+      bar.classList.add('hidden');
+    });
+  }
+  
+}
+
+const options =  {
+  root: null,
+  threshold: 0
+}
+
+const headerObserver = new IntersectionObserver(showHideBars, options)
+
+headerObserver.observe(header);
