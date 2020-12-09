@@ -872,14 +872,14 @@ figcaption {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-image: linear-gradient(to right top, black, var(--color-grey-light)), url("/img/form2.jpg");
+  background-image: linear-gradient(to right top, black, var(--color-grey-light)), url("../../../img/form2.jpg");
   background-position: bottom;
   background-blend-mode: screen; }
   .form__heading {
     font-size: 4rem;
     margin-top: 3rem;
     margin-bottom: 4.5rem;
-    padding: .75rem 1.5rem;
+    padding: .75rem 9rem;
     background-color: var(--color-primary-light);
     border-radius: 2px;
     filter: opacity(80%);
@@ -889,13 +889,17 @@ figcaption {
   .form__groups {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     width: 100%; }
 
 .form-group {
   height: 30%; }
 
 .form-group2 {
-  height: 50%; }
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
   .form-group2__title {
     text-align: center;
     text-transform: uppercase;
@@ -951,7 +955,7 @@ label {
   .radio-group__btn {
     height: 3rem;
     width: 3rem;
-    border: 3px solid var(--color-grey-dark);
+    border: 2px solid var(--color-grey-dark);
     border-radius: 50%;
     display: inline-block;
     position: absolute;
@@ -960,8 +964,8 @@ label {
     .radio-group__btn::after {
       content: "";
       display: block;
-      height: 1.3rem;
-      width: 1.3rem;
+      height: 1.5rem;
+      width: 1.5rem;
       border-radius: 50%;
       position: absolute;
       top: 50%;
@@ -983,12 +987,15 @@ label {
   margin-top: 3rem;
   margin-bottom: 2rem; }
 
+.btn-container {
+  width: 90vw; }
+
 .btn__submit {
   text-transform: uppercase;
   font-size: 1.5rem;
   font-weight: 300;
   padding: 1rem;
-  width: 15rem;
+  width: 15vw;
   display: block;
   text-decoration: none;
   transition: all .3s;
@@ -998,7 +1005,7 @@ label {
   border: 1px solid var(--color-primary-dark);
   cursor: pointer;
   border-radius: 2px;
-  margin-bottom: 1.5rem; }
+  margin: 3rem auto 1rem; }
 
 .btn__submit:hover {
   background-color: var(--color-primary-light);
@@ -1015,7 +1022,7 @@ label {
 .error__message {
   font-size: 3rem;
   margin-bottom: 3rem;
-  padding: .75rem 1.5rem;
+  padding: 0 3rem;
   background-color: var(--color-primary-light);
   border-radius: 2px;
   filter: opacity(80%);
