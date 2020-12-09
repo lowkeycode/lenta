@@ -23,24 +23,24 @@
          </nav>
     </header>
 
-    <div class="form">
+    <div class="form" >
         <h1 class="form__heading">Favorite Location?</h1>
         
-        <form class="form__groups">
+        <form class="form__groups" novalidate>
             <!-- Left Group -->
             <div class="form__groups--left">
                 <div class="form-group">
-                    <input id="name" name="name" type="text" placeholder="Full Name" title="Please enter your full name." required>
+                    <input id="name" name="name" type="text" placeholder="Full Name"  minlength="3" maxlentgth="50" required>
                     <label for="name">Full Name</label>
                 </div>
 
                 <div class="form-group">
-                    <input id="email" name="email" type="email" placeholder="Email" title="Please enter a valid email address." required>
+                    <input id="email" name="email" type="email" placeholder="Email" required>
                     <label for="email">Email</label>
                 </div>
 
                 <div class="form-group">
-                    <input id="tel" name="tel" type="tel" placeholder="555-555-5555" title="Please enter a phone number in the format shown." required>
+                    <input id="tel" name="tel" type="tel" placeholder="555-555-5555"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
                     <label for="tel">Phone Number</label>
                 </div>
             </div>
@@ -51,7 +51,7 @@
                     <!-- Radio Group -->
                     <div class="form-group-radio">
                         <div class="radio-group">
-                            <input id="photographer-1" type="radio" name="photographer">
+                            <input id="photographer-1" type="radio" name="photographer" required>
                             <label for="photographer-1"><span class="radio-group__btn"></span>Jenn Landreth</label>
                         </div>
                         <div class="radio-group">
@@ -63,7 +63,7 @@
                         <!-- Text Area -->
                         <div class="form-group-shoot">
                         <label for="shoot">Photo Shoot Description</label>
-                        <textarea name="shoot" id="shoot" cols="33" rows="8" placeholder="A short description summarizing your desired photo shoot..."></textarea>
+                        <textarea name="shoot" id="shoot" cols="33" rows="8" placeholder="A short description summarizing your desired photo shoot..." required></textarea>
                     </div>
                 </div>
             </div>
@@ -75,6 +75,6 @@
             <h2 class="error__message">Schedule a consultation</h2>
         </div>
     </div>
-    
+    <script src="../js/contact.js"></script>
 </body>
 </html>

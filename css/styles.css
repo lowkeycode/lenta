@@ -3,7 +3,7 @@
   --color-primary-dark: #aab38d;
   --color-secondary-light: #A48E9F;
   --color-secondary-dark: #896C82;
-  --color-accent-1: #F8F8F8;
+  --color-accent-1: #f8f8f8;
   --color-accent-2: #F6F7F3;
   --color-grey-light: #aaa;
   --color-grey-dark: #555;
@@ -964,8 +964,8 @@ label {
     .radio-group__btn::after {
       content: "";
       display: block;
-      height: 1.5rem;
-      width: 1.5rem;
+      height: 1.6rem;
+      width: 1.6rem;
       border-radius: 50%;
       position: absolute;
       top: 50%;
@@ -1028,4 +1028,5 @@ label {
   filter: opacity(80%);
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 2px; }
+  letter-spacing: 2px;
+  border: 2px solid transparent; }
