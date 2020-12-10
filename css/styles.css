@@ -872,7 +872,7 @@ figcaption {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-image: linear-gradient(to right top, black, var(--color-grey-light)), url(./img/form2.jpg);
+  background-image: linear-gradient(to right top, black, var(--color-grey-light)), url(../../../img/form2.jpg);
   background-position: bottom;
   background-blend-mode: screen; }
   .form__heading {
