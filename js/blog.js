@@ -12,10 +12,9 @@ const day = new Intl.DateTimeFormat(`en-Us`, {
 const year = new Intl.DateTimeFormat(`en-Us`, {
     year: `numeric`,
 }).format(date);
-// const time = new Intl.DateTimeFormat(`en-Us`, {
-//     hour: `numeric`,
-//     minute: `numeric`,
-// }).format(date);
+const loaders = document.querySelectorAll('.loader');
+const img1 = document.querySelector('.img1');
+const img2 = document.querySelector('.img2');
 
 
 const setDayOrdinal = (number) => {
@@ -34,3 +33,5 @@ const dayWithOrdinal = setDayOrdinal(day);
 
 const formattedDate = `${weekday}, ${month} ${dayWithOrdinal} ${year}`;
 copy.innerText = formattedDate;
+
+
