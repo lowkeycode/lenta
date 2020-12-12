@@ -1030,3 +1030,66 @@ label {
   text-transform: uppercase;
   letter-spacing: 2px;
   border: 2px solid transparent; }
+
+.about-title {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100px;
+  margin-top: 6rem; }
+  .about-title__copy {
+    text-transform: uppercase;
+    font-family: Raleway, sans-serif;
+    font-weight: 300;
+    font-size: 4.5rem;
+    margin: 0 1.5rem;
+    padding: .5rem 30vw; }
+
+.about-photo {
+  height: 600px;
+  background-blend-mode: screen;
+  background: linear-gradient(to top, var(--color-secondary-dark), var(--color-primary-light)), url(/img/about-title.jpg);
+  background-size: cover;
+  margin-top: 2rem; }
+
+.cards {
+  margin: 3rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 90vw;
+  justify-content: space-around; }
+  .cards__card {
+    flex: 30rem 0 1;
+    height: 60rem;
+    margin: 3rem;
+    display: grid;
+    grid-template-columns: repeat(2fr, 1fr);
+    grid-template-rows: 1fr 6fr;
+    background-color: var(--color-accent-1); }
+    .cards__card--title {
+      grid-column: 1 / 2;
+      text-transform: uppercase;
+      font-size: 3rem;
+      font-family: Cormorant Garamond, sans-serif;
+      color: var(--color-primary-dark);
+      margin-left: 1rem;
+      background-image: linear-gradient(to top, var(--color-secondary-dark), var(--color-grey-light));
+      -webkit-background-clip: text;
+      color: transparent; }
+    .cards__card--logo {
+      grid-column: 2 / 3;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+      margin-right: 2rem;
+      margin-top: 2rem; }
+    .cards__card--copy {
+      grid-column: 1 / 3;
+      grid-row: 2 / 3;
+      padding: 1rem;
+      font-size: 2rem; }
+
+.fas,
+.far {
+  font-size: 4rem;
+  color: var(--color-secondary-light); }
