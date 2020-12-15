@@ -1141,12 +1141,12 @@ label {
   margin-top: 2rem;
   margin-bottom: 6rem; }
 
-form {
+.ws-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; }
-  form .date {
+  .ws-form .date {
     padding: 6rem;
     width: 50vw;
     font-family: Cormorant Garamond, sans-serif;
@@ -1155,7 +1155,7 @@ form {
     background: var(--color-accent-1);
     margin-bottom: 1.5rem;
     cursor: pointer; }
-  form .time {
+  .ws-form .time {
     padding: 3rem;
     width: 50vw;
     font-family: Cormorant Garamond, sans-serif;
@@ -1164,7 +1164,7 @@ form {
     background: var(--color-accent-1);
     margin-bottom: 3rem;
     cursor: pointer; }
-  form button {
+  .ws-form button {
     margin-bottom: 1rem;
     color: var(--color-secondary-dark);
     border: 1px solid var(--color-secondary-dark);
