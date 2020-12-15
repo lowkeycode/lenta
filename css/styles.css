@@ -1051,6 +1051,7 @@ label {
   background-blend-mode: screen;
   background: linear-gradient(to top, var(--color-secondary-dark), var(--color-primary-light)), url(/img/about-title.jpg);
   background-size: cover;
+  background-position: center;
   margin-top: 2rem; }
 
 .cards {
@@ -1130,3 +1131,46 @@ label {
 .section-hidden {
   opacity: 0;
   transform: translateY(8px); }
+
+.workshop-photo {
+  height: 600px;
+  background-blend-mode: screen;
+  background: linear-gradient(to top, var(--color-secondary-dark), var(--color-grey-light)), url(/img/workshop.jpg);
+  background-size: cover;
+  background-position: center;
+  margin-top: 2rem;
+  margin-bottom: 6rem; }
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  form .date {
+    padding: 6rem;
+    width: 50vw;
+    font-family: Cormorant Garamond, sans-serif;
+    text-transform: uppercase;
+    font-size: 4rem;
+    background: var(--color-accent-1);
+    margin-bottom: 1.5rem;
+    cursor: pointer; }
+  form .time {
+    padding: 3rem;
+    width: 50vw;
+    font-family: Cormorant Garamond, sans-serif;
+    text-transform: uppercase;
+    font-size: 4rem;
+    background: var(--color-accent-1);
+    margin-bottom: 3rem;
+    cursor: pointer; }
+  form button {
+    margin-bottom: 1rem;
+    color: var(--color-secondary-dark);
+    border: 1px solid var(--color-secondary-dark);
+    cursor: pointer;
+    background: #Fff; }
+
+.workshop-copy {
+  text-align: center;
+  margin-bottom: 6rem; }
