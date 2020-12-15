@@ -1109,7 +1109,8 @@ label {
     background-color: var(--color-accent-1);
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    box-shadow: 1px 1px 8px #BBB; }
     .team__member img {
       width: 100%;
       border-radius: 2px; }
