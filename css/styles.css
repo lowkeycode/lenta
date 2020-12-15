@@ -1058,7 +1058,9 @@ label {
   display: flex;
   flex-wrap: wrap;
   width: 90vw;
-  justify-content: space-around; }
+  justify-content: space-around;
+  transition: all 1s;
+  opacity: 1; }
   .cards__card {
     flex: 30rem 0 1;
     height: 60rem;
@@ -1097,7 +1099,9 @@ label {
 
 .team {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); }
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  transition: all 2s;
+  opacity: 1; }
   .team__member {
     height: 30rem;
     padding: 1.5rem;
@@ -1121,3 +1125,7 @@ label {
     .team__member--job {
       font-size: 1.5rem;
       font-family: Cormorant Garamond, sans-serif; }
+
+.section-hidden {
+  opacity: 0;
+  transform: translateY(8px); }
