@@ -10,7 +10,7 @@ let photosArray = [];
 
 
 // API
-const count = 3;
+const count = 5;
 const apiKey = "dNz3c1X_j1AGBMw5Up-N-LmZtbJObnIxlu32YY22CUY";
 
 const randomInt = (min, max) =>
@@ -54,6 +54,7 @@ async function getPhotos() {
   // Show loader
   loader.removeAttribute('hidden');
   try {
+
     const response = await fetch(apiUrl);
     photosArray = await response.json();
 
@@ -62,6 +63,9 @@ async function getPhotos() {
     // Wait until there is a list of photos to make the intersecting element be the last img element otherwise on page load is null
 
     // Intersection Observer for Infinite Scroll
+
+    // todo check if all images are loaded with a boolean. If true load more. See infinite scroll video 1 & 2
+
     let lastImg =
       imageContainer.lastElementChild.previousElementSibling.firstChild;
 
@@ -93,8 +97,6 @@ async function getPhotos() {
     console.log(error);
   }
 }
-
-// Mod nav
 
 
 // On load
