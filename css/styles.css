@@ -1098,14 +1098,8 @@ figcaption {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-image: linear-gradient(
-      to right top,
-      black,
-      var(--color-grey-light)
-    ),
-    url(../../../img/form2.jpg);
+  background-image: url(../../../img/form2.jpg);
   background-position: bottom;
-  background-blend-mode: screen;
 }
 .form__heading {
   font-size: 4rem;
@@ -1306,13 +1300,7 @@ label {
 
 .about-photo {
   height: 600px;
-  background-blend-mode: screen;
-  background: linear-gradient(
-      to top,
-      var(--color-secondary-dark),
-      var(--color-primary-light)
-    ),
-    url(/img/about-title.jpg);
+  background: url(/img/about-title.jpg);
   background-size: cover;
   background-position: center;
   margin-top: 2rem;
@@ -1418,13 +1406,7 @@ label {
 
 .workshop-photo {
   height: 600px;
-  background-blend-mode: screen;
-  background: linear-gradient(
-      to top,
-      var(--color-secondary-dark),
-      var(--color-grey-light)
-    ),
-    url(/img/workshop.jpg);
+  background: url(/img/workshop.jpg);
   background-size: cover;
   background-position: center;
   margin-top: 2rem;
