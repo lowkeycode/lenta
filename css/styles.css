@@ -1098,7 +1098,7 @@ figcaption {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-image: url(../../img/form2.jpg);
+  background-image: url(../img/form2.jpg);
   background-position: bottom;
 }
 .form__heading {
