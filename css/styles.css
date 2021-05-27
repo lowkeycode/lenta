@@ -1406,7 +1406,7 @@ label {
 
 .workshop-photo {
   height: 600px;
-  background: url(/img/workshop.jpg);
+  background: url(../img/workshop.jpg);
   background-size: cover;
   background-position: center;
   margin-top: 2rem;
