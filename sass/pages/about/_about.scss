@@ -19,7 +19,7 @@
 .about-photo {
   height: 600px;
   background-blend-mode: screen;
-  background: linear-gradient(
+  background-image: linear-gradient(
       to top,
       var(--color-secondary-dark),
       var(--color-primary-light)
