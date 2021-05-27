@@ -18,13 +18,7 @@
 
 .about-photo {
   height: 600px;
-  background-blend-mode: screen;
-  background-image: linear-gradient(
-      to top,
-      var(--color-secondary-dark),
-      var(--color-primary-light)
-    ),
-    url(/img/about-title.jpg);
+  background-image: url(/img/about-title.jpg);
   background-size: cover;
   background-position: center;
   margin-top: 2rem;
