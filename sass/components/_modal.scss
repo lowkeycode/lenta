@@ -66,18 +66,19 @@
             top: 1rem;
             right: 3rem;
             background: rgba(85,85,85,0);
-            color: #FFF;
-            height: 3.5rem;
-            font-size: 2.5rem;
+            color: #EEE;
+            font-size: 5rem;
             cursor: pointer;
             border-bottom: 1px solid transparent;
-            transition: all .2s;
-
+            transition: all .3s;
+            line-height: normal;
             
             
 
             &:hover {
+                color: #FFF;
                 border-bottom: 1px solid #FFF;
+                transform: scale(.95);
             }
         }
     }
